@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         override fun getItemCount(): Int = fragments.size
         override fun createFragment(position: Int): Fragment = fragments[position]
     }
+    //Tab
+    private  val tabTitleArray = arrayOf("Weather","Leisure","Diary","User")
+    private val tabIconArray = arrayOf(R.drawable.sun, R.drawable.surf, R.drawable.diary, R.drawable.user)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
@@ -36,10 +41,18 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MyFragmentPaperAdapter(this)
         binding.viewpager.adapter = adapter
-        /*
-        TabLayoutMediator(binding.tabs, binding.viewpager){ tab, position ->
-            tab.text = "Tab${(position+1)}"
-        }.attach()*/
+
+        //Tab
+        val viewPager = binding.viewpager
+        val tabLayout = binding.tabs
+        viewPager.adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+        TabLayoutMediator(tabLayout, viewPager){ tab, position ->
+            tab.text =tabTitleArray[position]
+            tab.icon = getDrawable(tabIconArray[position])
+        }.attach()
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

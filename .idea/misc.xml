@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/drawable/btn_round.xml" value="0.122" />
+        <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/layout/activity_after_login.xml" value="0.1" />
+        <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/layout/activity_login.xml" value="0.2484375" />
         <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/layout/fragment_one.xml" value="0.1" />
         <entry key="..\:/Users/ahran/Desktop/duksung/MobileApp/MyApplication_FinalProject/app/src/main/res/layout/fragment_three.xml" value="0.1" />
